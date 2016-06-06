@@ -1,0 +1,40 @@
+// GLOBAL VARIABLES 
+// All of these variables are defined in the global normalize reset
+
+
+  // media queries sizes vars
+    $xs: 320px;
+    $sm: 768px;
+    $md: 992px;
+    $lg: 1200px;
+    $hd: 1400px;
+
+
+
+// COLOR PALETTE
+  $azul        : steelblue;
+  $azul-oscuro : #255484;
+  $azul-claro  : lighten(steelblue,25%);
+  $negro       : #070D12;
+  $blanco      : #FDFDFD;
+  $gris        : #ccc;
+  $gris-oscuro : #444;
+  $gris-claro  : #f0f0f0;
+  $rojo        : darken(tomato,10);
+
+// GLOBALES STYLES
+  $body--background  : #fff;                          // body global font-color
+  $body--font-family : 'Oswald';                      // body global font-family
+  $body--color       : #333;                          // body global font-family color
+  $body--font-size   : 14px;
+  $body--line-height : 1.42857143;
+
+
+
+// ANCHOR STYLES
+  $link--color : #337ab7;  // color para los enlaces
+
+// PARAGRAPHS STYLES
+  $p--font-size   : 1em;        // Tamaño de fuente
+  $p--line-height : 1.5;        // Altura de línea
+  $p--margin      : 1em;        // Separación entre un párrafo y el siguiente

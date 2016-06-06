@@ -1,0 +1,33 @@
+// --------------------------------------------------------------------------------------------------------------
+
+@mixin mapMarker($name, $bg-url){
+  .map-marker-#{$name}{
+    background-image: url($bg-url);
+    background-size: 40px 80px;
+    background-position: 0 -25px;
+    width: 40px;
+    height: 60px;
+    
+    &:after{
+      content: '99999';
+      color: white;
+      display: block;
+      position: absolute;
+      top: -20px;
+      right: -15px;
+      background: #E26B6C;
+      font-size: 12px;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 35px;
+      width: 35px;
+      height: 35px;
+    }
+    
+    &.active{
+        &:after{
+            background-color: #00A69C;
+        }
+    }
+  }
+}

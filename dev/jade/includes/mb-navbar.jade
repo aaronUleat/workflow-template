@@ -1,0 +1,28 @@
+nav.mb-navbar
+	.container
+		.col-xs-12
+			.box
+				a#simple-menu(href='#sidr').glyphicon.glyphicon-menu-hamburger
+		.col-xs-12
+			.box
+				#sidr
+					a#left-close(href='#sidr').glyphicon.glyphicon-remove
+					h1 lorem
+					ul
+						li.menu-title: a(href='#') Level 1
+							ul.sub-menu
+								li.menu-item: a(href='#') Level 2
+								li.menu-item: a(href='#') Level 2
+								li.menu-item: a(href='#') Level 2
+						li.menu-title: a(href='#') Level 1
+							ul.sub-menu
+								li.menu-item: a(href='#') Level 2
+								li.menu-item: a(href='#') Level 2
+								li.menu-item: a(href='#') Level 2
+						li.menu-title: a(href='#') Level 1
+							ul.sub-menu
+								li.menu-item: a(href='#') Level 2
+								li.menu-item: a(href='#') Level 2
+								li.menu-item: a(href='#') Level 2
+					form
+						input(placeholder='Search...', type='text')

@@ -1,0 +1,31 @@
+// base
+@import "core/base/vars";           // Global Variables
+@import "core/base/global";         // Global normalize reset
+@import "core/base/fonts";          // text fonts
+@import "core/base/icon-fonts";     // Icon fonts
+// mixins
+@import "core/mixins/aligns";		// aligns
+@import "core/mixins/animations";	// animations
+@import "core/mixins/bp";			// BreakPoints Media queries
+@import "core/mixins/bg";			// Backgrounds
+@import "core/mixins/button";		// Buttons
+@import "core/mixins/img";			// Images Optimization
+@import "core/mixins/map";			// Google Maps
+@import "core/mixins/menu";			// Menu Customized
+@import "core/mixins/proportion";	// Proportion and Appearance
+// utilies
+// @import "core/base/vars";
+
+// Vendors
+// @import "vendors/sidr";
+// @import "vendors/slick";
+// @import "vendors/slick-theme";
+// modules
+@import "modules/global-styles";
+@import "modules/top-navbar";
+@import "modules/mb-navbar";
+@import "modules/main-slider";
+@import "modules/slider-centered";
+@import "modules/success";
+@import "modules/error";
+@import "modules/frm-module";

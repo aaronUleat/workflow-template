@@ -1,0 +1,9 @@
+// Mixin para proporcion de aspecto, se le pasan tres parámetros
+// Horizontal, Vertical y Ancho. Este ultimo es opcional, si no 
+// se pasa, se tomará el 100% de ancho por defecto.
+@mixin proporcion($h,$v,$width:100%){
+	width          : $width;
+	height         : 0;
+	overflow       : hidden;
+	padding-bottom : $width * ($v/$h);
+}

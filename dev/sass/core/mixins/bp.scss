@@ -1,0 +1,48 @@
+/* Breakpoints */
+@mixin bp($break) {
+	@if $break == lg {
+		@media (min-width: $lg) { @content; }
+	}
+	@else if $break == md {
+		@media (min-width: $md) { @content; }
+	}
+	@else if $break == sm {
+		@media (min-width: $sm) { @content; }
+	} @else {
+		@media ($break) { @content; }
+	}
+}
+
+/*-- Usage --*/
+/* 
+	body {
+		background: pink;
+		@include bp(lg) { background: red; }
+		@include bp(md) { background: cyan; }
+		@include bp(sm) { background: green; }
+		@include bp("min-width: 480px") { background: yellow; }
+	}
+*/
+
+// --------------------------------------------------------------------------------------------------------------
+
+@mixin showOnlyDesktop(){
+  display: none;
+    @include bp(md){
+      display: block;
+    }
+}
+
+@mixin showDesktop(){
+  display: none;
+
+    @include bp(sm){
+      display: block;
+    }
+}
+
+@mixin showMobile(){
+  @include bp(sm){
+    display: none;
+  }
+}

@@ -1,0 +1,93 @@
+/* Animations */
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+/*-- Usage --*/
+/* 
+	@include keyframes(slide-down) {
+	  0% { opacity: 1; }
+	  90% { opacity: 0; }
+	}
+
+	.element {
+	  width: 100px;
+	  height: 100px;
+	  background: black;
+	  @include animation('slide-down 5s 3');
+	}
+*/
+
+// --------------------------------------------------------------------------------------------------------------
+
+
+/* Transitions */
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+/*-- Usage --*/
+/* 
+	a {
+	  color: gray;
+	  @include transition(color .3s ease);
+	  &:hover {
+	    color: black;
+	  }
+	}
+*/
+
+// --------------------------------------------------------------------------------------------------------------
+
+/* Trasnform */
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+/*-- Usage --*/
+/* 
+  @include transform(rotate(360deg));
+*/
+
+// --------------------------------------------------------------------------------------------------------------
+
+@mixin spin-icon(){
+  img{
+    @include transition(all .5s ease);
+  }
+
+  &:hover{
+    img{
+      @include transform(rotate(90deg));
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------------------------------------

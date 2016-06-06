@@ -1,0 +1,40 @@
+// --------------------------------------------------------------------------------------------------------------
+
+
+// my mixins
+
+/* Aplica un color doble a un contendor */
+@mixin two-color-bg($color1, $color2, $deg) {
+  background: $color1;
+  background: -moz-linear-gradient($deg,  $color1 0%, $color1 50%, $color2 51%, $color2 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$color1), color-stop(50%,$color1), color-stop(51%,$color2), color-stop(100%,$color2));
+  background: -webkit-linear-gradient($deg,  $color1 0%,$color1 50%,$color2 51%,$color2 100%);
+  background: -o-linear-gradient($deg,  $color1 0%,$color1 50%,$color2 51%,$color2 100%);
+  background: -ms-linear-gradient($deg,  $color1 0%,$color1 50%,$color2 51%,$color2 100%);
+  background: linear-gradient($deg,  $color1 0%,$color1 50%,$color2 51%,$color2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$color1}, endColorstr=#{$color2},GradientType=1 );
+}
+/*-- Usage --*/
+/*
+	two-color-bg(#ffffff, #000000, 15deg);
+*/
+
+// --------------------------------------------------------------------------------------------------------------
+/* Aplica un color doble a un boton */
+@mixin two-color-btn($color1, $color2, $deg){
+  padding: 10px 60px;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  @include two-color-bg($color1, $color2, $deg);
+
+  &:hover{
+    text-decoration: none;
+    color: #DDD;
+  }
+}
+/*-- Usage --*/
+/*
+  two-color-btn(#ffffff, #000000, 15deg);
+*/
